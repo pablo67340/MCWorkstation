@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXColorPicker?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="606.0" prefWidth="712.0" styleClass="jfx-tab-pane" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="website.bryces.mcworkstation.main.FXMLDocumentController">
+    <children>
+      <JFXTabPane layoutY="-1.0" prefHeight="606.0" prefWidth="712.0">
+         <tabs>
+            <Tab text="Language">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="60.0" layoutY="104.0" text="Color Code Symbol:" textFill="WHITE">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField focusColor="#a4a4a4" layoutX="264.0" layoutY="108.0" onMouseClicked="#setCopy" prefHeight="25.0" prefWidth="125.0" style="-fx-text-fill: white;" text="§" unFocusColor="WHITE" />
+                        <Line endX="500.0" layoutX="157.0" layoutY="169.0" startX="-100.0" stroke="WHITE" />
+                        <Label layoutX="60.0" layoutY="192.0" text="MC Colors:" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="142.0" layoutY="235.0" prefHeight="27.0" prefWidth="50.0" text="Black">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField focusColor="BLACK" layoutX="197.0" layoutY="234.0" onMouseClicked="#setCopy" style="-fx-text-fill: white;" text="&amp;0" unFocusColor="WHITE" />
+                        <Label layoutX="105.0" layoutY="260.0" text="Dark Blue" textFill="#3407e4">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField focusColor="#3407e4" layoutX="197.0" layoutY="261.0" onMouseClicked="#setCopy" style="-fx-text-fill: white;" text="&amp;1" unFocusColor="WHITE" />
+                        <Label layoutX="93.0" layoutY="287.0" text="Dark Green" textFill="#00830d">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField focusColor="#00830d" layoutX="197.0" layoutY="288.0" onMouseClicked="#setCopy" style="-fx-text-fill: white;" text="&amp;2" unFocusColor="WHITE" />
+                        <Label layoutX="98.0" layoutY="314.0" text="Dark Aqua" textFill="#01869a">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField focusColor="#01869a" layoutX="197.0" layoutY="315.0" onMouseClicked="#setCopy" style="-fx-text-fill: white;" text="&amp;3" unFocusColor="WHITE" />
+                        <Label layoutX="108.0" layoutY="341.0" text="Dark Red" textFill="RED">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField focusColor="RED" layoutX="197.0" layoutY="342.0" onMouseClicked="#setCopy" style="-fx-text-fill: white;" text="&amp;4" unFocusColor="WHITE" />
+                        <Label layoutX="140.0" layoutY="403.0" prefHeight="27.0" prefWidth="41.0" text="Gold" textFill="#ffd700">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField focusColor="GOLD" layoutX="197.0" layoutY="404.0" onMouseClicked="#setCopy" style="-fx-text-fill: white;" text="&amp;6" unFocusColor="WHITE" />
+                        <Label layoutX="88.0" layoutY="371.0" text="Dark Purple" textFill="#970074">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField focusColor="#970074" layoutX="197.0" layoutY="372.0" onMouseClicked="#setCopy" style="-fx-text-fill: white;" text="&amp;5" unFocusColor="WHITE" />
+                        <Label layoutX="140.0" layoutY="430.0" prefHeight="27.0" prefWidth="41.0" text="Gray" textFill="#8d8d8d">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField focusColor="#8d8d8d" layoutX="197.0" layoutY="431.0" onMouseClicked="#setCopy" style="-fx-text-fill: white;" text="&amp;7" unFocusColor="WHITE" />
+                        <Label layoutX="99.0" layoutY="457.0" prefHeight="27.0" prefWidth="82.0" text="Dark Gray" textFill="#404040">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField focusColor="#404040" layoutX="197.0" layoutY="458.0" onMouseClicked="#setCopy" style="-fx-text-fill: white;" text="&amp;8" unFocusColor="WHITE" />
+                        <Label layoutX="123.0" layoutY="484.0" prefHeight="27.0" prefWidth="63.0" text="Indigo" textFill="#06006f">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField focusColor="#06006f" layoutX="197.0" layoutY="485.0" onMouseClicked="#setCopy" style="-fx-text-fill: white;" text="&amp;9" unFocusColor="WHITE" />
+                        <Label layoutX="386.0" layoutY="235.0" prefHeight="27.0" prefWidth="63.0" text="Green" textFill="#07f222">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField focusColor="#07f222" layoutX="460.0" layoutY="236.0" onMouseClicked="#setCopy" style="-fx-text-fill: white;" text="&amp;A" unFocusColor="WHITE" />
+                        <Label layoutX="386.0" layoutY="262.0" prefHeight="27.0" prefWidth="63.0" text="Aqua" textFill="#0ef3ff">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField focusColor="#0ef3ff" layoutX="460.0" layoutY="263.0" onMouseClicked="#setCopy" style="-fx-text-fill: white;" text="&amp;B" unFocusColor="WHITE" />
+                        <Label layoutX="386.0" layoutY="290.0" prefHeight="27.0" prefWidth="63.0" text="Red" textFill="#f24343">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField focusColor="#f24343" layoutX="460.0" layoutY="291.0" onMouseClicked="#setCopy" style="-fx-text-fill: white;" text="&amp;C" unFocusColor="WHITE" />
+                        <Label layoutX="386.0" layoutY="318.0" prefHeight="27.0" prefWidth="63.0" text="Pink" textFill="#f80e7f">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField focusColor="#f80e7f" layoutX="460.0" layoutY="319.0" onMouseClicked="#setCopy" style="-fx-text-fill: white;" text="&amp;D" unFocusColor="WHITE" />
+                        <Label layoutX="386.0" layoutY="344.0" prefHeight="27.0" prefWidth="63.0" text="Yellow" textFill="#fff600">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField focusColor="#fff600" layoutX="460.0" layoutY="345.0" onMouseClicked="#setCopy" style="-fx-text-fill: white;" text="&amp;E" unFocusColor="WHITE" />
+                        <Label layoutX="386.0" layoutY="371.0" prefHeight="27.0" prefWidth="63.0" text="White" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField focusColor="WHITE" layoutX="460.0" layoutY="372.0" onMouseClicked="#setCopy" style="-fx-text-fill: white;" text="&amp;F" unFocusColor="WHITE" />
+                        <Label layoutX="386.0" layoutY="398.0" prefHeight="27.0" prefWidth="63.0" styleClass="strike" text="Strike" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField focusColor="#a4a4a4" layoutX="460.0" layoutY="399.0" onMouseClicked="#setCopy" style="-fx-text-fill: white;" text="&amp;M" unFocusColor="WHITE" />
+                        <Label layoutX="365.0" layoutY="425.0" prefHeight="27.0" prefWidth="92.0" styleClass="underline" text="Underlined" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField focusColor="#a4a4a4" layoutX="460.0" layoutY="426.0" onMouseClicked="#setCopy" style="-fx-text-fill: white;" text="&amp;N" unFocusColor="WHITE" />
+                        <Label layoutX="386.0" layoutY="451.0" prefHeight="27.0" prefWidth="63.0" text="BOLD" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField focusColor="#a4a4a4" layoutX="460.0" layoutY="452.0" onMouseClicked="#setCopy" style="-fx-text-fill: white;" text="&amp;L" unFocusColor="WHITE" />
+                        <Label fx:id="lblRandom" layoutX="376.0" layoutY="479.0" prefHeight="27.0" prefWidth="73.0" text="Random" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField focusColor="#a4a4a4" layoutX="460.0" layoutY="480.0" onMouseClicked="#setCopy" style="-fx-text-fill: white;" text="&amp;K" unFocusColor="WHITE" />
+                        <Label layoutX="392.0" layoutY="507.0" prefHeight="27.0" prefWidth="44.0" text="Italic" textFill="WHITE">
+                           <font>
+                              <Font name="System Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField focusColor="#a4a4a4" layoutX="460.0" layoutY="508.0" onMouseClicked="#setCopy" style="-fx-text-fill: white;" text="&amp;O" unFocusColor="WHITE" />
+                        <Label layoutX="385.0" layoutY="192.0" text="RGB/HEX:" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <JFXColorPicker fx:id="colorChooser" layoutX="495.0" layoutY="195.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Item DB">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <JFXTextField fx:id="txtSearch" layoutX="232.0" layoutY="74.0" onAction="#txtTypeEvent" onKeyTyped="#txtTypeEvent" prefHeight="25.0" prefWidth="300.0" unFocusColor="WHITE" />
+                        <Label layoutX="105.0" layoutY="71.0" text="Item Search:" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="lstItems" layoutX="14.0" layoutY="131.0" prefHeight="427.0" prefWidth="678.0">
+                          <columns>
+                            <TableColumn fx:id="colImage" prefWidth="40.0" text="Image" />
+                            <TableColumn fx:id="colMaterial" minWidth="5.0" prefWidth="493.0" text="Material" />
+                              <TableColumn fx:id="colItemID" minWidth="0.0" prefWidth="130.0" text="Item ID" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Snippets">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <JFXListView fx:id="lstCat" layoutX="14.0" layoutY="54.0" onMouseClicked="#selectCategory" prefHeight="449.0" prefWidth="112.0" />
+                        <JFXListView fx:id="lstSnippet" layoutX="128.0" layoutY="53.0" onMouseClicked="#selectSnippet" prefHeight="449.0" prefWidth="171.0" />
+                        <JFXTextArea fx:id="txtSnippetInfo" editable="false" focusColor="#405aa800" layoutX="309.0" layoutY="54.0" prefHeight="172.0" prefWidth="398.0" style="-fx-background-color: gray;" unFocusColor="#4d4d4d00" />
+                        <JFXTextArea fx:id="txtSnippet" editable="false" focusColor="#405aa800" layoutX="309.0" layoutY="284.0" onMouseClicked="#chooseSnippet" prefHeight="217.0" prefWidth="397.0" style="-fx-background-color: gray;" unFocusColor="#4d4d4d00" />
+                        <Label layoutX="17.0" layoutY="28.0" text="Category:" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="165.0" layoutY="28.0" text="Snippets:" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="459.0" layoutY="28.0" text="Snippet Info:" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="410.0" layoutY="257.0" text="Snippet Output (click-copy):" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Validators">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <JFXButton fx:id="btnValidate" layoutX="74.0" layoutY="520.0" onAction="#btnValidateAction" style="-fx-background-color: grey;" text="Validate" textFill="WHITE" />
+                        <Label layoutX="279.0" layoutY="22.0" text="Multi-Validator" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <JFXRadioButton fx:id="rdYML" layoutX="193.0" layoutY="68.0" selected="true" text="YAML" textFill="WHITE">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="type" />
+                           </toggleGroup>
+                        </JFXRadioButton>
+                        <JFXRadioButton fx:id="rdJSON" layoutX="486.0" layoutY="68.0" text="JSON" textFill="WHITE" toggleGroup="$type" />
+                        <Label layoutX="323.0" layoutY="331.0" text="Output:" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="334.0" layoutY="85.0" text="Input:" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <JFXTextArea fx:id="txtInput" focusColor="#ffffff00" layoutX="74.0" layoutY="126.0" prefHeight="190.0" prefWidth="570.0" style="-fx-background-color: grey;" unFocusColor="#ffffff00" />
+                        <JFXTextArea fx:id="txtOutput" focusColor="#ffffff00" layoutX="74.0" layoutY="372.0" prefHeight="133.0" prefWidth="563.0" style="-fx-background-color: grey;" unFocusColor="#ffffff00" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+      <AnchorPane fx:id="anchDrag" layoutX="350.0" minWidth="350.0" onMouseDragged="#mouseDragAction" onMousePressed="#dragAction" prefHeight="34.0" prefWidth="350.0">
+         <children>
+            <JFXButton fx:id="btnClose" layoutX="298.0" onAction="#btnCloseAction" prefHeight="35.0" prefWidth="64.0" ripplerFill="RED" style="-fx-background-color: #757575;" text="X" />
+         </children></AnchorPane>
+    </children>
+   <stylesheets>
+      <URL value="@custom.css" />
+      <URL value="@../assets/css/custom.css" />
+   </stylesheets>
+</AnchorPane>

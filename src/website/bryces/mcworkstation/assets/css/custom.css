@@ -1,0 +1,37 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Aug 12, 2018, 3:37:41 PM
+    Author     : Bryce
+*/
+
+.jfx-tab-pane .tab-header-background {
+    -fx-background-color: #848484;
+}
+
+.jfx-tab-pane .headers-region > .tab > .jfx-rippler {
+    -jfx-rippler-fill: #551A8B;
+}
+
+.jfx-tab-pane .headers-region .tab-selected-line {
+    -fx-background-color: #551A8B;
+}
+
+.strike .text { 
+    -fx-strikethrough: true; 
+}
+
+.underline .tetx{
+    -fx-underline: true;
+}
+
+.tooltip {
+    -fx-show-duration: 1s ;
+}
+
+.jfx-radio-button {
+    -jfx-unselected-color: WHITE;
+}
