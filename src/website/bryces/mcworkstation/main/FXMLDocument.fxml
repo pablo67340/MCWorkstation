@@ -7,7 +7,6 @@
 <?import com.jfoenix.controls.JFXTabPane?>
 <?import com.jfoenix.controls.JFXTextArea?>
 <?import com.jfoenix.controls.JFXTextField?>
-<?import java.net.URL?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TableColumn?>
@@ -17,7 +16,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" fx:id="root" prefHeight="606.0" prefWidth="712.0" styleClass="jfx-tab-pane" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="website.bryces.mcworkstation.main.FXMLDocumentController">
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="606.0" prefWidth="712.0" styleClass="jfx-tab-pane" stylesheets="@../assets/css/custom.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="website.bryces.mcworkstation.main.FXMLDocumentController">
     <children>
       <JFXTabPane layoutY="-1.0" prefHeight="606.0" prefWidth="712.0">
          <tabs>
@@ -261,10 +260,7 @@
       <AnchorPane fx:id="anchDrag" layoutX="350.0" minWidth="350.0" onMouseDragged="#mouseDragAction" onMousePressed="#dragAction" prefHeight="34.0" prefWidth="350.0">
          <children>
             <JFXButton fx:id="btnClose" layoutX="298.0" onAction="#btnCloseAction" prefHeight="35.0" prefWidth="64.0" ripplerFill="RED" style="-fx-background-color: #757575;" text="X" />
+            <JFXButton fx:id="btnMinimize" layoutX="236.0" onAction="#btnMinimizeAction" prefHeight="35.0" prefWidth="64.0" ripplerFill="#07ff00" style="-fx-background-color: #757575;" text="-" />
          </children></AnchorPane>
     </children>
-   <stylesheets>
-      <URL value="@custom.css" />
-      <URL value="@../assets/css/custom.css" />
-   </stylesheets>
 </AnchorPane>

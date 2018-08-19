@@ -16,8 +16,10 @@ import com.jfoenix.controls.JFXColorPicker;
 import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import static java.lang.String.CASE_INSENSITIVE_ORDER;
 import java.net.URL;
 import java.net.URLConnection;
@@ -41,6 +43,7 @@ import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.RadioButton;
@@ -68,8 +71,6 @@ import javafx.scene.layout.BackgroundSize;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-import org.apache.commons.io.IOUtils;
-import org.apache.commons.lang3.StringUtils;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -117,6 +118,9 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     private RadioButton rdYML, rdJSON;
+    
+    @FXML
+    private Button btnMinimize;
 
     private static FXMLDocumentController INSTANCE;
 
@@ -284,7 +288,17 @@ public class FXMLDocumentController implements Initializable {
             InputStream in = con.getInputStream();
             String encoding = con.getContentEncoding();
             encoding = encoding == null ? "UTF-8" : encoding;
-            body = IOUtils.toString(in, encoding);
+
+            try (BufferedReader br= new BufferedReader(new InputStreamReader(in, encoding))) {
+                StringBuilder sb = new StringBuilder();
+                String line;
+                while ((line = br.readLine()) != null) {
+                    sb.append(line);
+                    sb.append('\n');
+                }
+                body = sb.toString();
+            }
+
             return body;
         } catch (IOException e) {
             System.out.println("Error fetching item feed!");
@@ -399,8 +413,9 @@ public class FXMLDocumentController implements Initializable {
                 txtOutput.setText(prettyJsonString);
             } catch (ParseException e) {
                 if (e.toString().contains("at position")) {
-                    String error = StringUtils.substringBefore(e.toString(), "at position");
-                    Integer line = Integer.parseInt(StringUtils.substringAfter(e.toString(), "at position ").replace(".", ""));
+                    String[] pre = e.toString().split("at position");
+                    String error = pre[0];
+                    Integer line = Integer.parseInt(pre[1].replace(".", "").trim());
                     line -= 1;
                     error += "at character number " + line + ".";
                     txtOutput.setText(error);
@@ -422,6 +437,12 @@ public class FXMLDocumentController implements Initializable {
         Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
         clipboard.setContents(selection, selection);
         countDelay(tp);
+    }
+    
+    public void btnMinimizeAction(ActionEvent event){
+        thisStage.setIconified(true);
+        // This is just to fix the permenant rippler bug.
+        root.requestFocus();
     }
 
 }

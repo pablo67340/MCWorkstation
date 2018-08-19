@@ -7,11 +7,14 @@ package website.bryces.mcworkstation.main;
 
 import java.net.URL;
 import javafx.application.Application;
+import static javafx.application.Application.launch;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.JavaFXBuilderFactory;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -56,7 +59,20 @@ public class MCWorkstation extends Application {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        launch(args);
+        String java = System.getProperty("java.version");
+        if (!java.contains("1.8")) {
+            Platform.runLater(() -> {
+                Alert alert = new Alert(Alert.AlertType.ERROR, "You must be running Java 8!", ButtonType.CLOSE);
+                alert.showAndWait();
+
+                if (alert.getResult() == ButtonType.CLOSE) {
+                    System.exit(1);
+                }
+                // No point in handling the close button as launch will fail after closing the alert.
+            });
+        } else {
+            launch(args);
+        }
     }
     
 }

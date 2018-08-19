@@ -2,7 +2,7 @@
 <launch4jConfig>
   <dontWrapJar>false</dontWrapJar>
   <headerType>console</headerType>
-  <jar>C:\Users\Bryce\Desktop\MCWorkstation.jar</jar>
+  <jar>C:\Users\Bryce\Documents\NetBeansProjects\MCWorkstation\store\MCWorkstation.jar</jar>
   <outfile>C:\Users\Bryce\Desktop\MCWorkstation.exe</outfile>
   <errTitle></errTitle>
   <cmdLine></cmdLine>
@@ -18,18 +18,18 @@
     <path></path>
     <bundledJre64Bit>false</bundledJre64Bit>
     <bundledJreAsFallback>false</bundledJreAsFallback>
-    <minVersion>1.8</minVersion>
-    <maxVersion></maxVersion>
+    <minVersion>1.8.0</minVersion>
+    <maxVersion>1.8.0_181</maxVersion>
     <jdkPreference>preferJre</jdkPreference>
     <runtimeBits>64/32</runtimeBits>
   </jre>
   <versionInfo>
-    <fileVersion>1.0.0.0</fileVersion>
-    <txtFileVersion>1.0R1</txtFileVersion>
+    <fileVersion>1.2.0.0</fileVersion>
+    <txtFileVersion>1.2R1</txtFileVersion>
     <fileDescription>MCWorkstation designed for Developers &amp; Config writers!</fileDescription>
     <copyright>N/A</copyright>
-    <productVersion>1.0.0.0</productVersion>
-    <txtProductVersion>1.0R1</txtProductVersion>
+    <productVersion>1.2.0.0</productVersion>
+    <txtProductVersion>1.2R1</txtProductVersion>
     <productName>MCWorkstation</productName>
     <companyName>Abstract Studios</companyName>
     <internalName>MCWorkstation</internalName>
